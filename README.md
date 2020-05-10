@@ -73,6 +73,14 @@ Example output of the command:
 
 Please save or remember where your files are persisted. You are gonna need them later.
 
+now lets generate dhparam pem files in the ssl directory with the openssl command.
+
+```
+mkdir -p /etc/gitlab/ssl/
+sudo openssl dhparam -out /etc/gitlab/ssl/dhparams.pem 2048
+chmod 600 /etc/gitlab/ssl/*
+```
+
 ## Use your own nginx
 
 As you might already know, gitlab comes with its own embedded nginx. But you can change gitlab configuration so it doesnt use its own nginx. Then you can add proper reverse proxy configuration to your own running nginx so you can access gitlab.
@@ -102,7 +110,11 @@ gitlab_rails['trusted_proxies'] = [ '192.168.1.0/24', '192.168.2.1', '2001:0db8:
 
 Copy the contents of `nginx.conf` file of this repository and paste it as your nginx configuration, under `/etc/nginx/sites-enable/gitlab.conf`. Remember to change the lines of `gitlab.yourdomain.com` to valid address.
 
+Also check if `ssl_dhparam`, `ssl_certificate`, `ssl_certificate_key` are pointing to valid files.
+
 ---
+
+## Final step
 
 Now run reconfiguration for gitlab:
 
