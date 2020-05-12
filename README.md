@@ -42,7 +42,7 @@ nano gitlab.rb
 In the GitLab configuration go to line 9 'external_url' and change the URL to your URL 'gitlab.yourdomain.com'.
 
 ```
-external_url 'http://gitlab.yourdomain.com'
+external_url 'https://gitlab.yourdomain.com'
 ```
 Close editor and save changes.
 
