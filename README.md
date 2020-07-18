@@ -1,7 +1,7 @@
 # gitlab-ce unembedded nginx (ubuntu)
 Gitlab CE installation with unembedded Nginx
 
-**Note**: This has been tested on ubuntu 18.04 server and might work with other versions of ubuntu too. No other distros has been tested and it probably isn't going to work on them.
+**Note**: This has been tested on ubuntu 18.04 server and might work with other versions of ubuntu too. No other distros has been tested and it probably isn't going to work on them unless you make few changes to the procedure.
 
 
 ## Configure DNS
